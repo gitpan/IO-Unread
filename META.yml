@@ -1,0 +1,13 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         IO-Unread
+version:      0.06
+version_from: Unread.pm
+installdirs:  site
+requires:
+    PerlIO:                        0.00
+    Test::More:                    0.46
+    XSLoader:                      0.00
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.17

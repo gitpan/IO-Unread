@@ -1,15 +1,13 @@
-use inc::Module::Install;
+use ExtUtils::MakeMaker;
 
-name           ('IO-Unread');
-author         ('Ben Morrow <IO-Unread@morrow.me.uk>');
-version_from   ('lib/IO/Unread.pm');
-license        ('perl');
+WriteMakefile(
+    NAME         => "IO::Unread",
+    VERSION_FROM => "Unread.pm",
+    PREREQ_PM    => { 
+        "Test::More" => "0.46", 
+        "XSLoader"   => "0.00",
+	"PerlIO"     => "0.00",
+    },
+    AUTHOR       => 'Ben Morrow <IO-Unread@morrow.me.uk>',
+);
 
-requires       ('perl'       => 5.008);
-build_requires ('Inline::C'  => 0.44);
-build_requires ('Test::More' => 0.46);
-
-include('ExtUtils::AutoInstall');
-auto_install();
-
-&Inline->write;
